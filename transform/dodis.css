@@ -97,3 +97,4 @@
 .tei-row1 { font-weight: bold; }
 .tei-floatingText { margin: 6pt; border: solid black 1pt; }
 .tei-table { font-size: smaller; background-color: #F0F0F0; }
+.tei-emph { font-style: italic; }

@@ -1,10 +1,5 @@
-<?xml-model href="teipublisher_odds.xsd"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Dodis</title>
-                <desc>Dodis ODD</desc>
-            </titleStmt>
+<?xml-model href="teipublisher_odds.xsd"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:pb="http://teipublisher.com/1.0" xml:lang="en"><teiHeader><fileDesc>
+            <titleStmt><title>Dodis</title><desc>Dodis ODD</desc></titleStmt>
             <publicationStmt>
                 <publisher>eXistSolutions GmbH</publisher>
                 <availability>
@@ -26,14 +21,16 @@
                 </p>
                 <p>born digital</p>
             </sourceDesc>
-        </fileDesc>
-        <revisionDesc>
+        </fileDesc><encodingDesc><tagsDecl/></encodingDesc><revisionDesc>
             <change when="2026-01-16+01:00">Initial version</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
+        </revisionDesc></teiHeader><text>
         <body>
-            <schemaSpec start="TEI teiCorpus" source="teipublisher.odd" ident="dodis"> </schemaSpec>
+            <schemaSpec start="TEI teiCorpus" ident="dodis" source="teipublisher.odd"> <elementSpec ident="emph" mode="add">
+        <model behaviour="inline">
+            <outputRendition xml:space="preserve">
+            font-style: italic;
+            </outputRendition>
+        </model>
+    </elementSpec></schemaSpec>
         </body>
-    </text>
-</TEI>
+    </text></TEI>
