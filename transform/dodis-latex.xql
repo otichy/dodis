@@ -492,6 +492,8 @@ declare function model:apply($config as map(*), $input as node()*) {
                         latex:break($config, ., ("tei-cb", css:map-rend-to-class(.)), ., 'column', @n)
                     case element(emph) return
                         latex:inline($config, ., ("tei-emph", css:map-rend-to-class(.)), .)
+                    case element(persName) return
+                        latex:inline($config, ., ("tei-persName", css:map-rend-to-class(.)), .)
                     case element() return
                         if (namespace-uri(.) = 'http://www.tei-c.org/ns/1.0') then
                             $config?apply($config, ./node())

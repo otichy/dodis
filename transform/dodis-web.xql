@@ -482,6 +482,8 @@ declare function model:apply($config as map(*), $input as node()*) {
                         html:break($config, ., ("tei-cb", css:map-rend-to-class(.)), ., 'column', @n)                        => model:map($node, $trackIds)
                     case element(emph) return
                         html:inline($config, ., ("tei-emph", css:map-rend-to-class(.)), .)                        => model:map($node, $trackIds)
+                    case element(persName) return
+                        html:inline($config, ., ("tei-persName", css:map-rend-to-class(.)), .)                        => model:map($node, $trackIds)
                     case element(exist:match) return
                         html:match($config, ., .)
                     case element() return

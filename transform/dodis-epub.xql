@@ -484,6 +484,8 @@ declare function model:apply($config as map(*), $input as node()*) {
                         epub:break($config, ., ("tei-cb", css:map-rend-to-class(.)), ., 'column', @n)
                     case element(emph) return
                         html:inline($config, ., ("tei-emph", css:map-rend-to-class(.)), .)
+                    case element(persName) return
+                        html:inline($config, ., ("tei-persName", css:map-rend-to-class(.)), .)
                     case element(exist:match) return
                         html:match($config, ., .)
                     case element() return
