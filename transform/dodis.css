@@ -66,10 +66,13 @@
 .tei-stage { font-style: italic; }
 .tei-hi { font-style: italic; }
 .tei-code { font-family:monospace }
+.tei-dateline { text-align: right; }
 .tei-edition:before { content: 'Edition: '; }
 .tei-del { text-decoration: line-through; }
 .tei-trailer { color: green; }
-.tei-div1 { border: 1px solid black; padding: 5px; }
+.tei-div3 { border: 1px solid black; padding: 5px; }
+.tei-ref1 { font-size: 19px; text-align: right; display: block; }
+.tei-ref2 { null }
 .tei-add { color: green; text-decoration: underline; }
 .tei-head2 { font-style: italic; }
 .tei-head3 { font-style: italic; }
@@ -77,10 +80,10 @@
 .tei-head5 { font-weight: bold; }
 .tei-speaker { font-style:italic; }
 .tei-unclear:after { content: ' [?] '; }
-.tei-title5 { font-style: italic; }
 .tei-title7 { font-style: italic; }
 .tei-title9 { font-style: italic; }
 .tei-title11 { font-style: italic; }
+.tei-title13 { font-style: italic; }
 .tei-corr2:before { content: '['; }
 .tei-corr2:after { content: ']'; }
 .tei-foreign { font-style:italic; }
