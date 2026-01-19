@@ -1,0 +1,162 @@
+<?xml-model href="teipublisher_odds.xsd"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:pb="http://teipublisher.com/1.0" xml:lang="en"><teiHeader><fileDesc>
+            <titleStmt><title>Songs of Innocence and Experience</title><title type="short">songs</title><desc>Presentation ODD for the Blake poems sample.</desc></titleStmt>
+            <publicationStmt>
+                <publisher>TEI Publisher</publisher>
+                <availability>
+                    <licence target="https://www.gnu.org/licenses/gpl-3.0.en.html">Distributed under GNU GPLv3</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital for the TEI Publisher sample collection.</p>
+            </sourceDesc>
+        </fileDesc><encodingDesc><tagsDecl/></encodingDesc><revisionDesc>
+            <change when="2026-01-19">Initial version for Songs of Innocence and Experience.</change>
+        </revisionDesc></teiHeader><text>
+        <body>
+            <schemaSpec start="TEI" ident="songs" source="teipublisher.odd">
+                <!-- Header shown as a compact metadata block -->
+                <elementSpec ident="teiHeader" mode="change"><model output="web" behaviour="block"><pb:template xmlns="" xml:space="preserve"><div class="doc-meta"><div class="meta-title">[[fileDesc/titleStmt/title]]</div><div class="meta-author">[[fileDesc/titleStmt/author]]</div></div></pb:template><outputRendition xml:space="preserve">
+                        margin: 0 0 1.4rem 0;
+                        padding: 0.85rem 1rem;
+                        background: #f6f1e6;
+                        border: 1px solid rgba(0,0,0,0.06);
+                        border-radius: 12px;
+                        color: #2b1d0f;
+                        }
+                        .doc-meta .meta-title {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        }
+                        .doc-meta .meta-author {
+                        margin-top: 0.15rem;
+                        font-size: 1rem;
+                        color: #4d3b2a;
+                        letter-spacing: 0.04em;
+                        }
+                        </outputRendition></model></elementSpec>
+                
+                <!-- Overall document container -->
+                <elementSpec ident="TEI" mode="change"><model behaviour="document"/></elementSpec>
+                
+                <!-- Body and text just flow content -->
+                <elementSpec ident="text" mode="change"><model behaviour="block"/></elementSpec>
+                <elementSpec ident="body" mode="change"><model behaviour="block"/></elementSpec>
+                
+                <!-- Book wrapper: soft card styling -->
+                <elementSpec ident="div1" mode="change"><modelSequence predicate="@type='book'">
+            <model behaviour="section">
+                <outputRendition xml:space="preserve">
+                
+                
+                            margin: 1.5rem 0;
+                            padding: 1.2rem 1.3rem 1.6rem;
+                            background: #ffffff;
+                            border: 1px solid rgba(0,0,0,0.05);
+                            border-radius: 14px;
+                            box-shadow: 0 12px 36px rgba(0,0,0,0.08);
+                            
+                
+                </outputRendition>
+            </model>
+        </modelSequence><model behaviour="section"/></elementSpec>
+                
+                <!-- Poem container -->
+                <elementSpec ident="div2" mode="change"><modelSequence predicate="@type='poem'">
+            <model behaviour="section">
+                <param name="level" value="3"/>
+                <outputRendition xml:space="preserve">
+                
+                
+                            margin: 0 0 1.8rem 0;
+                            padding: 1.1rem 1.1rem 1.3rem;
+                            background: linear-gradient(135deg, rgba(196,179,240,0.15), rgba(243,217,164,0.18));
+                            border: 1px solid rgba(0,0,0,0.04);
+                            border-radius: 12px;
+                            
+                
+                </outputRendition>
+            </model>
+        </modelSequence><model behaviour="section"/></elementSpec>
+                
+                <!-- Headings: book and poem titles -->
+                <elementSpec ident="head" mode="change"><model predicate="parent::div1" behaviour="heading">
+            <param name="level" value="2"/>
+            <outputRendition xml:space="preserve">
+            
+            
+                        letter-spacing: 0.08em;
+                        text-transform: uppercase;
+                        border-bottom: 1px solid rgba(0,0,0,0.08);
+                        padding-bottom: 0.5rem;
+                        margin-bottom: 1.2rem;
+                        
+            
+            </outputRendition>
+        </model><model predicate="parent::div2" behaviour="heading">
+            <param name="level" value="3"/>
+            <outputRendition xml:space="preserve">
+            
+            
+                        color: #2b1d4f;
+                        margin: 0 0 0.8rem 0;
+                        letter-spacing: 0.04em;
+                        
+            
+            </outputRendition>
+        </model><model behaviour="heading"/></elementSpec>
+                
+                <!-- Stanzas -->
+                <elementSpec ident="lg" mode="change"><model predicate="@type='stanza'" behaviour="block">
+            <outputRendition xml:space="preserve">
+            
+            
+                        margin: 0 0 1.1rem 0;
+                        padding-left: 0.2rem;
+                        
+            
+            </outputRendition>
+        </model><model behaviour="block"/></elementSpec>
+                
+                <!-- Verse lines -->
+                <elementSpec ident="l" mode="change"><model predicate="@rend='indent'" behaviour="block">
+            <outputRendition xml:space="preserve">
+            
+            
+                        padding-left: 1.6rem;
+                        display: block;
+                        
+            
+            </outputRendition>
+        </model><model behaviour="block">
+            <outputRendition xml:space="preserve">
+            
+            
+                        display: block;
+                        padding-left: 0.2rem;
+                        
+            
+            </outputRendition>
+        </model></elementSpec>
+                
+                <!-- Page breaks -->
+                <elementSpec ident="pb" mode="change"><model behaviour="inline">
+            <pb:template xmlns="" xml:space="preserve"><span class="page-break">Page [[@n]]</span></pb:template>
+            <outputRendition xml:space="preserve">
+            display: inline-block;
+                        margin: 0.25rem 0;
+                        padding: 0.2rem 0.55rem;
+                        font-size: 0.82rem;
+                        color: #5f4b20;
+                        background: rgba(212,168,95,0.16);
+                        border-radius: 8px;
+            </outputRendition>
+        </model></elementSpec>
+                
+                <!-- Paragraphs and text -->
+                <elementSpec ident="p" mode="change"><model behaviour="paragraph"/></elementSpec>
+                <elementSpec ident="text()" mode="change"/>
+            </schemaSpec>
+        </body>
+    </text></TEI>
