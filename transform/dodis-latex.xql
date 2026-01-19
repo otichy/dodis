@@ -534,8 +534,6 @@ declare function model:apply($config as map(*), $input as node()*) {
                         latex:link($config, ., ("tei-idno", css:map-rend-to-class(.)), ., ., map {})
                     case element(metadata) return
                         latex:inline($config, ., ("tei-metadata", css:map-rend-to-class(.)), .)
-                    case element(keywords) return
-                        latex:listItem($config, ., ("tei-keywords", css:map-rend-to-class(.)), //term, ())
                     case element() return
                         if (namespace-uri(.) = 'http://www.tei-c.org/ns/1.0') then
                             $config?apply($config, ./node())

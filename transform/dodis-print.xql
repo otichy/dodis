@@ -97,7 +97,11 @@ declare function model:apply($config as map(*), $input as node()*) {
                         if ($parameters?header='short') then
                             html:block($config, ., ("tei-teiHeader3", css:map-rend-to-class(.)), .)
                         else
-                            html:block($config, ., ("tei-teiHeader4", css:map-rend-to-class(.)), //keywords)
+                            (
+                                html:block($config, ., ("tei-teiHeader4", css:map-rend-to-class(.)), //summary),
+                                html:list($config, ., ("tei-teiHeader5", css:map-rend-to-class(.)), //keywords/term, ())
+                            )
+
                     case element(figure) return
                         if (head or @rendition='simple:display') then
                             html:block($config, ., ("tei-figure1", css:map-rend-to-class(.)), .)
@@ -529,8 +533,8 @@ declare function model:apply($config as map(*), $input as node()*) {
                         html:link($config, ., ("tei-idno", css:map-rend-to-class(.)), ., ., (), map {})
                     case element(metadata) return
                         html:inline($config, ., ("tei-metadata", css:map-rend-to-class(.)), .)
-                    case element(keywords) return
-                        html:listItem($config, ., ("tei-keywords", css:map-rend-to-class(.)), //term, ())
+                    case element(term) return
+                        html:listItem($config, ., ("tei-term", css:map-rend-to-class(.)), ., ())
                     case element(exist:match) return
                         html:match($config, ., .)
                     case element() return

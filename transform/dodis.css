@@ -41,6 +41,7 @@
 
 /* Model rendition styles */
 
+.tei-teiHeader5:before { content: "Keywords:" }
 .tei-supplied2:before { content:"<"; }
 .tei-supplied2:after { content:">"; }
 .tei-supplied3:before { content:"["; }

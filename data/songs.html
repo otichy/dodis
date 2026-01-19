@@ -1,0 +1,178 @@
+<!DOCTYPE HTML><html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Songs of innocence and of experience</title>
+      <style>
+               :root {
+                  --ink: #1a1a1a;
+                  --gold: #d4a85f;
+                  --cream: #f7f2e8;
+                  --shadow: rgba(0,0,0,0.08);
+                  --accent: #7e3f98;
+               }
+               * { box-sizing: border-box; }
+               body {
+                  margin: 0;
+                  font-family: "Georgia", "Palatino", serif;
+                  background: radial-gradient(circle at 20% 20%, #fff7ea, #f1e7d7 40%, #ebdfcd);
+                  color: var(--ink);
+                  line-height: 1.7;
+               }
+               header.hero {
+                  padding: 3rem 1.5rem 2rem;
+                  text-align: center;
+                  position: relative;
+                  overflow: hidden;
+               }
+               header.hero::after, header.hero::before {
+                  content: "";
+                  position: absolute;
+                  width: 280px;
+                  height: 280px;
+                  border-radius: 50%;
+                  filter: blur(40px);
+                  opacity: 0.35;
+                  z-index: 0;
+               }
+               header.hero::before {
+                  background: #f3d9a4;
+                  top: -80px; left: -60px;
+               }
+               header.hero::after {
+                  background: #c4b3f0;
+                  bottom: -100px; right: -80px;
+               }
+               .hero-content {
+                  position: relative;
+                  z-index: 1;
+                  display: inline-block;
+                  padding: 1rem 1.5rem;
+                  background: rgba(255,255,255,0.72);
+                  border-radius: 18px;
+                  box-shadow: 0 20px 60px var(--shadow);
+                  backdrop-filter: blur(6px);
+                  border: 1px solid rgba(0,0,0,0.03);
+               }
+               .hero h1 {
+                  margin: 0 0 0.25rem;
+                  font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+               }
+               .hero .author {
+                  font-size: 1.1rem;
+                  color: #5b4b39;
+                  text-transform: uppercase;
+                  letter-spacing: 0.22em;
+               }
+               main {
+                  max-width: 900px;
+                  margin: 0 auto;
+                  padding: 1rem 1.2rem 3rem;
+               }
+               section.book {
+                  margin-top: 2rem;
+                  padding: 1rem 1.25rem 1.5rem;
+                  background: #fff;
+                  border-radius: 18px;
+                  box-shadow: 0 12px 35px var(--shadow);
+                  border: 1px solid rgba(0,0,0,0.04);
+               }
+               .book-title {
+                  margin: 0 0 1.4rem;
+                  font-size: 1.6rem;
+                  letter-spacing: 0.06em;
+                  text-transform: uppercase;
+                  color: #2d1e0f;
+                  border-bottom: 1px solid rgba(0,0,0,0.08);
+                  padding-bottom: 0.6rem;
+               }
+               article.poem {
+                  margin: 0 0 2.4rem;
+                  padding: 1rem 1rem 1.25rem;
+                  border-radius: 14px;
+                  background: linear-gradient(135deg, rgba(196,179,240,0.18), rgba(243,217,164,0.22));
+                  border: 1px solid rgba(0,0,0,0.04);
+               }
+               .poem h2 {
+                  margin: 0 0 0.8rem;
+                  font-size: 1.35rem;
+                  letter-spacing: 0.03em;
+                  color: #2b1d4f;
+               }
+               .stanza {
+                  margin: 0 0 1.1rem;
+                  padding-left: 0.2rem;
+               }
+               .line {
+                  display: block;
+                  padding-left: 0.2rem;
+               }
+               .line.indent {
+                  padding-left: 1.5rem;
+               }
+               .page-break {
+                  display: inline-block;
+                  margin: 0.25rem 0;
+                  padding: 0.2rem 0.5rem;
+                  font-size: 0.8rem;
+                  color: #5f4b20;
+                  background: rgba(212,168,95,0.14);
+                  border-radius: 8px;
+               }
+               footer.meta {
+                  margin-top: 2.5rem;
+                  text-align: center;
+                  color: #6a5a47;
+                  font-size: 0.95rem;
+               }
+               @media (max-width: 640px) {
+                  main { padding: 0.5rem 0.7rem 2.4rem; }
+                  .hero-content { width: 100%; }
+               }
+            </style>
+   </head>
+   <body>
+      <header class="hero">
+         <div class="hero-content">
+            <h1>Songs of innocence and of experience</h1>
+            <div class="author">William Blake</div>
+         </div>
+      </header>
+      <main>
+         <section class="book">
+            <h2 class="book-title">Songs of Innocence</h2>
+            <article class="poem">
+               <h2>Introduction</h2>
+               <div class="stanza"><span class="line">Piping down the valleys wild, </span><span class="line">Piping songs of pleasant glee, </span><span class="line">On a cloud I saw a child, </span><span class="line">And he laughing said to me: </span></div>
+               <div class="stanza"><span class="line">"Pipe a song about a Lamb!" </span><span class="line">So I piped with merry chear. </span><span class="line">"Piper, pipe that song again;" </span><span class="line">So I piped, he wept to hear. </span></div>
+               <div class="stanza"><span class="line">"Drop thy pipe, thy happy pipe; </span><span class="line">Sing thy songs of happy chear:" </span><span class="line">So I sung the same again, </span><span class="line">While he wept with joy to hear. </span></div>
+               <div class="stanza"><span class="line">"Piper, sit thee down and write </span><span class="line">In a book, that all may read." </span><span class="line">So he vanis​'d from my sight, </span><span class="line">And I pluck​'d a hollow reed, </span></div>
+               <div class="stanza"><span class="line">And I made a rural pen, </span><span class="line">And I stain​'d the water clear, </span><span class="line">And I wrote my happy songs </span><span class="line">Every child may joy to hear. </span></div>
+            </article>
+            <article class="poem">
+               <h2>The Shepherd</h2>
+               <div class="stanza"><span class="line">How sweet is the Shepherd​'s sweet lot! </span><span class="line">From the morn to the evening he strays; </span><span class="line">He shall follow his sheep all the day, </span><span class="line">And his tongue shall be filled with praise. </span></div>
+               <div class="stanza"><span class="line">For he hears the lamb​'s innocent call, </span><span class="line">And he hears the ewe​'s tender reply; </span><span class="line">He is watchful while they are in peace, </span><span class="line">For they know when their Shepherd is nigh. </span></div>
+            </article>
+            <article class="poem">
+               <h2>The Ecchoing Green</h2>
+               <div class="stanza"><span class="line">The Sun does arise, </span><span class="line">And make happy the skies; </span><span class="line">The merry bells ring </span><span class="line">To welcome the Spring; </span><span class="line">The sky​-lark and thrush, </span><span class="line">The birds of the bush, </span><span class="line">Sing louder around </span><span class="line">To the bells' chearful sound, </span><span class="line">While our sports shall be seen </span><span class="line">On the Ecchoing Green. </span></div>
+               <div class="stanza"><span class="line">Old John, with white hair, </span><span class="line">Does laugh away care, </span><span class="line">Sitting under the oak, </span><span class="line">Among the old folk. <span class="page-break">Page 7</span></span><span class="line">They laugh at our play, </span><span class="line">And soon they all say: </span><span class="line">"Such, such were the joys </span><span class="line">When we all, girls &amp; boys, </span><span class="line">In our youth time were seen </span><span class="line">On the Ecchoing Green." </span></div>
+               <div class="stanza"><span class="line">Till the little ones, weary, </span><span class="line">No more can be merry; </span><span class="line">The sun does descend, </span><span class="line">And our sports have an end. </span><span class="line">Round the laps of their mothers </span><span class="line">Many sisters and brothers, </span><span class="line">Like birds in their nest, </span><span class="line">Are ready for rest, </span><span class="line">And sport no more seen </span><span class="line">On the darkening Green. </span></div>
+            </article>
+            <article class="poem">
+               <h2>The Lamb</h2>
+               <div class="stanza"><span class="line indent">Little lamb, who made thee? </span><span class="line indent">Dost thou know who made thee? </span><span class="line">Gave thee life &amp; bid thee feed, </span><span class="line">By the stream &amp; o​'er the mead; </span><span class="line">Gave thee clothing of delight, </span><span class="line">Softest clothing, wooly, bright; </span><span class="line">Gave thee such a tender voice, </span><span class="line">Making all the vales rejoice? </span><span class="line indent">Little Lamb, who made thee? </span><span class="line indent">Dost thou know who made thee? </span></div>
+               <div class="stanza"><span class="line indent">Little Lamb, I​'ll tell thee, </span><span class="line indent">Little Lamb, I​'ll tell thee: </span><span class="line">He is called by thy name, </span><span class="line">For he calls himself a Lamb. </span><span class="line">He is meek &amp; he is mild; </span><span class="line">He became a little child. </span><span class="line">I a child &amp; thou a lamb. </span><span class="line">We are called by his name. </span><span class="line indent">Little Lamb, God bless thee! </span><span class="line indent">Little Lamb, God bless thee!</span></div>
+            </article>
+         </section>
+      </main>
+      <footer class="meta">
+         <div>Generated from TEI using XSLT</div>
+         <div>From TEIByExample</div>
+      </footer>
+   </body>
+</html>

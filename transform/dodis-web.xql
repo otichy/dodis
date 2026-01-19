@@ -95,7 +95,11 @@ declare function model:apply($config as map(*), $input as node()*) {
                         if ($parameters?header='short') then
                             html:block($config, ., ("tei-teiHeader3", css:map-rend-to-class(.)), .)                            => model:map($node, $trackIds)
                         else
-                            html:block($config, ., ("tei-teiHeader4", css:map-rend-to-class(.)), //keywords)                            => model:map($node, $trackIds)
+                            (
+                                html:block($config, ., ("tei-teiHeader4", css:map-rend-to-class(.)), //summary)                                => model:map($node, $trackIds),
+                                html:list($config, ., ("tei-teiHeader5", css:map-rend-to-class(.)), //keywords/term, ())                                => model:map($node, $trackIds)
+                            )
+
                     case element(figure) return
                         if (head or @rendition='simple:display') then
                             html:block($config, ., ("tei-figure1", css:map-rend-to-class(.)), .)                            => model:map($node, $trackIds)
@@ -524,8 +528,8 @@ declare function model:apply($config as map(*), $input as node()*) {
                         html:link($config, ., ("tei-idno", css:map-rend-to-class(.)), ., ., (), map {})                        => model:map($node, $trackIds)
                     case element(metadata) return
                         html:inline($config, ., ("tei-metadata", css:map-rend-to-class(.)), .)                        => model:map($node, $trackIds)
-                    case element(keywords) return
-                        html:listItem($config, ., ("tei-keywords", css:map-rend-to-class(.)), //term, ())                        => model:map($node, $trackIds)
+                    case element(term) return
+                        html:listItem($config, ., ("tei-term", css:map-rend-to-class(.)), ., ())                        => model:map($node, $trackIds)
                     case element(exist:match) return
                         html:match($config, ., .)
                     case element() return
